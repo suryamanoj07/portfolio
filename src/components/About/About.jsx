@@ -1,6 +1,8 @@
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
 import profileImage from '../../assets/profile2.png';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const About = () => {
   return (
@@ -11,6 +13,33 @@ const About = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center gap-6 lg:gap-12 xl:gap-16">
         {/* Left Side: Text Block */}
         <div className="w-full lg:w-2/3 text-center lg:text-left flex flex-col justify-center">
+          {/* Social Icons for mobile only */}
+          <div className="flex justify-center gap-4 mb-4 lg:hidden">
+            <a
+              href="https://github.com/suryamanoj07"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+            >
+              <FaGithub size={24} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/surya-manoj-b309a8281/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+            >
+              <FaLinkedin size={24} />
+            </a>
+            <a
+              href="https://leetcode.com/suryamanoj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+            >
+              <SiLeetcode size={24} />
+            </a>
+          </div>
           <h1 className="text-responsive-3xl sm:text-responsive-4xl lg:text-lg xl:text-responsive-5xl font-bold text-white mb-4 lg:mb-6 leading-tight">
             Hi, I am
           </h1>
