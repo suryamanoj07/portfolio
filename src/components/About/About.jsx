@@ -11,13 +11,13 @@ const About = () => {
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center gap-6 lg:gap-12 xl:gap-16">
         {/* Left Side: Text Block */}
         <div className="w-full lg:w-2/3 text-center lg:text-left flex flex-col justify-center">
-          <h1 className="text-responsive-3xl sm:text-responsive-4xl lg:text-lg xl:text-responsive-5xl font-bold text-white mb-3 leading-tight">
+          <h1 className="text-responsive-3xl sm:text-responsive-4xl lg:text-lg xl:text-responsive-5xl font-bold text-white mb-4 lg:mb-6 leading-tight">
             Hi, I am
           </h1>
-          <h2 className="text-responsive-4xl sm:text-responsive-5xl lg:text-xl xl:text-responsive-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-responsive-4xl sm:text-responsive-5xl lg:text-xl xl:text-responsive-6xl font-bold text-white mb-6 lg:mb-8 leading-tight">
             Surya Manoj
           </h2>
-          <h3 className="text-responsive-xl sm:text-responsive-2xl lg:text-base xl:text-responsive-3xl font-semibold mb-6 text-[#8245ec] leading-tight">
+          <h3 className="text-responsive-xl sm:text-responsive-2xl lg:text-base xl:text-responsive-3xl font-semibold mt-2 lg:mt-4 mb-8 lg:mb-10 text-[#8245ec] leading-tight">
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
