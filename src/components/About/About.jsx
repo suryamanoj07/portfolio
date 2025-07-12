@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-8 sm:py-8 lg:py-8 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 sm:mt-12 lg:mt-16"
+      className="pt-4 pb-8 sm:py-8 lg:py-8 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-8 sm:mt-12 lg:mt-16"
     >
       <div className="flex flex-col-reverse lg:flex-row items-center lg:items-center gap-6 lg:gap-12 xl:gap-16">
         {/* Left Side: Text Block */}
@@ -67,7 +67,7 @@ const About = () => {
             <p className="text-justify lg:text-left lg:text-sm">
               I am a passionate and curious learner currently pursuing my B.Tech in Computer Science from Indian Institute of Indian Institute of Information Technology Sri City. I enjoy building web applications and solving real-world problems through code.
             </p>
-            <p className="text-justify lg:text-left lg:text-sm">
+            <p className="hidden sm:block text-justify lg:text-left lg:text-sm">
               I am skilled in frontend and backend development, and I actively practice problem-solving on LeetCode. I also have a growing interest in AI/ML, and I&apos;ve completed internships where I worked on real-world projects. I am always open to learning new technologies and improving my skills, and I&apos;m looking forward to starting my journey as a software developer.
             </p>
           </div>
@@ -75,7 +75,7 @@ const About = () => {
             href="https://drive.google.com/file/d/1b8Y5Yg0Oh2wYOYp_7PUjLlFLH8xVkqNx/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-auto self-center lg:self-start text-white py-3 px-6 sm:px-8 rounded-full text-responsive-base sm:text-responsive-lg lg:text-sm font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
+            className="inline-block w-full sm:w-auto self-center lg:self-start text-white py-3 px-6 sm:px-8 rounded-full text-responsive-base sm:text-responsive-lg lg:text-sm font-bold transition duration-300 transform hover:scale-105 hover:shadow-lg"
             style={{
               background: 'linear-gradient(90deg, #8245ec, #a855f7)',
               boxShadow: '0 0 2px #8245ec, 0 0 2px #8245ec, 0 0 40px #8245ec',
