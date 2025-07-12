@@ -6,11 +6,11 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-4 px-[4vw] md:px-[4vw] lg:px-[14vw] font-sans mt-16 md:mt-24 lg:mt-32"
+      className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
       <div className="flex flex-col-reverse md:flex-row justify-between items-center">
         {/* Left Side */}
-        <div className="md:w-3/4 text-center md:text-left mt-8 md:mt-0">
+        <div className="md:w-4/6 text-center md:text-left mt-8 md:mt-0">
           {/* Greeting */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
             Hi, I am
@@ -67,7 +67,7 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/3 flex justify-center md:justify-end">
           <Tilt
-            className="w-40 h-40 sm:w-52 sm:h-52 md:w-[24rem] md:h-[24rem] border-4 border-purple-700 rounded-full"
+            className="w-32 h-32 sm:w-52 sm:h-52 md:w-[18rem] md:h-[18rem] border-4 border-purple-700 rounded-full"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
