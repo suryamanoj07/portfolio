@@ -52,6 +52,14 @@ const Work = () => {
                   </span>
                 ))}
               </div>
+              <button
+                className="mt-2 px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-full shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
+                type="button"
+                tabIndex={-1}
+                onClick={e => e.stopPropagation()}
+              >
+                View More
+              </button>
             </div>
           </div>
         ))}
