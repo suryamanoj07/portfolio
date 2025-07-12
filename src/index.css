@@ -10,6 +10,21 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Prevent zoom on input focus for iOS */
+input, textarea, select {
+  font-size: 16px !important;
 }
 
 @layer utilities {
@@ -22,14 +37,135 @@ html {
     .clip-path-custom-3 {
         clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
       }
+    
+    /* Responsive text utilities */
+    .text-responsive-xs {
+      font-size: clamp(0.75rem, 2vw, 0.875rem);
+    }
+    .text-responsive-sm {
+      font-size: clamp(0.875rem, 2.5vw, 1rem);
+    }
+    .text-responsive-base {
+      font-size: clamp(1rem, 3vw, 1.125rem);
+    }
+    .text-responsive-lg {
+      font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+    }
+    .text-responsive-xl {
+      font-size: clamp(1.25rem, 4vw, 1.5rem);
+    }
+    .text-responsive-2xl {
+      font-size: clamp(1.5rem, 5vw, 2rem);
+    }
+    .text-responsive-3xl {
+      font-size: clamp(1.875rem, 6vw, 2.5rem);
+    }
+    .text-responsive-4xl {
+      font-size: clamp(2.25rem, 7vw, 3rem);
+    }
+    .text-responsive-5xl {
+      font-size: clamp(3rem, 8vw, 4rem);
+    }
+    .text-responsive-6xl {
+      font-size: clamp(3.75rem, 10vw, 5rem);
+    }
+    
+    /* Responsive padding utilities - maintain original desktop padding */
+    .px-responsive {
+      padding-left: clamp(1rem, 5vw, 20vw);
+      padding-right: clamp(1rem, 5vw, 20vw);
+    }
+    .py-responsive {
+      padding-top: clamp(2rem, 8vw, 6rem);
+      padding-bottom: clamp(2rem, 8vw, 6rem);
+    }
+    
+    /* Responsive margin utilities */
+    .mx-responsive {
+      margin-left: clamp(1rem, 5vw, 2rem);
+      margin-right: clamp(1rem, 5vw, 2rem);
+    }
+    .my-responsive {
+      margin-top: clamp(1rem, 4vw, 2rem);
+      margin-bottom: clamp(1rem, 4vw, 2rem);
+    }
+    
+    /* Responsive width utilities */
+    .w-responsive {
+      width: clamp(90%, 95%, 100%);
+    }
+    .max-w-responsive {
+      max-width: clamp(20rem, 80vw, 80rem);
+    }
+    
+    /* Smooth transitions */
+    .transition-smooth {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Better focus states */
+    .focus-ring {
+      @apply focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    }
+    
+    /* Custom scrollbar */
+    .custom-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: #8245ec #1f2937;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1f2937;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #8245ec;
+      border-radius: 3px;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #a855f7;
+    }
   }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-html{
-  font-size: 16px;
-  box-sizing: border-box;
+/* Ensure proper scaling on mobile devices */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Prevent horizontal scroll */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
   

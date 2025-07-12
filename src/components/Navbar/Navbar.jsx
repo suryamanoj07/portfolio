@@ -39,13 +39,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+      className={`fixed top-0 w-full z-50 transition duration-300 px-responsive ${
         isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
+      <div className="text-white py-3 sm:py-4 lg:py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-xl font-semibold cursor-pointer">
+        <div className="text-lg sm:text-xl lg:text-2xl font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Surya</span>
           <span className="text-[#8245ec]">/</span>
@@ -54,11 +54,11 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300">
+        <ul className="hidden md:flex space-x-6 lg:space-x-8 text-gray-300">
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] text-lg ${
+              className={`cursor-pointer hover:text-[#8245ec] text-base lg:text-lg transition-colors duration-200 ${
                 activeSection === item.id ? "text-[#8245ec]" : ""
               }`}
             >
@@ -70,27 +70,30 @@ const Navbar = () => {
         </ul>
 
         {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-3 lg:space-x-4">
           <a
             href="https://github.com/suryamanoj07"
             target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
           >
-            <FaGithub size={28} />
+            <FaGithub size={24} className="lg:w-7 lg:h-7" />
           </a>
           <a
             href="https://www.linkedin.com/in/surya-manoj-b309a8281/"
             target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
           >
-            <FaLinkedin size={28} />
+            <FaLinkedin size={24} className="lg:w-7 lg:h-7" />
           </a>
           <a
             href="https://leetcode.com/suryamanoj"
             target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
           >
-            <SiLeetcode size={28} />
+            <SiLeetcode size={24} className="lg:w-7 lg:h-7" />
           </a>
         </div>
 
@@ -98,12 +101,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer transition-colors duration-200"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer transition-colors duration-200"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -112,12 +115,12 @@ const Navbar = () => {
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="absolute top-full left-0 right-0 bg-[#050414] bg-opacity-95 backdrop-filter backdrop-blur-lg z-50 shadow-lg md:hidden">
+          <ul className="flex flex-col items-center space-y-4 py-6 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
+                className={`cursor-pointer hover:text-white text-lg font-medium transition-colors duration-200 ${
                   activeSection === item.id ? "text-[#8245ec]" : ""
                 }`}
               >
@@ -126,28 +129,31 @@ const Navbar = () => {
                 </button>
               </li>
             ))}
-            <div className="flex space-x-4">
+            <div className="flex space-x-6 pt-4">
               <a
-            href="https://github.com/suryamanoj07"
-            target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaGithub size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/surya-manoj-b309a8281/"
-            target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://leetcode.com/suryamanoj"
-            target="_blank" 
-            className="text-gray-300 hover:text-[#8245ec]"
-          >
-            <SiLeetcode size={24} />
-          </a>
+                href="https://github.com/suryamanoj07"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+              >
+                <FaGithub size={24} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/surya-manoj-b309a8281/"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+              >
+                <FaLinkedin size={24} />
+              </a>
+              <a
+                href="https://leetcode.com/suryamanoj"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-[#8245ec] transition-colors duration-200"
+              >
+                <SiLeetcode size={24} />
+              </a>
             </div>
           </ul>
         </div>
