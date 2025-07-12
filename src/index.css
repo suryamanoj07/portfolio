@@ -23,4 +23,13 @@ html {
         clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
       }
   }
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 16px;
+  box-sizing: border-box;
+}
   
