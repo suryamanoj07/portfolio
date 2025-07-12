@@ -64,7 +64,7 @@ const Work = () => {
             <div className="flex justify-end p-4">
               <button
                 onClick={handleCloseModal}
-                className="text-white text-2xl sm:text-3xl font-bold hover:text-purple-500 transition-colors duration-200"
+                className="text-white text-2xl sm:text-3xl lg:text-lg font-bold hover:text-purple-500 transition-colors duration-200"
               >
                 &times;
               </button>
@@ -72,17 +72,17 @@ const Work = () => {
 
             <div className="flex flex-col">
               <div className="px-4 sm:px-6 lg:px-8 pb-6">
-                <h3 className="text-responsive-xl sm:text-responsive-2xl lg:text-responsive-3xl font-bold text-white mb-4">
+                <h3 className="text-responsive-xl sm:text-responsive-2xl lg:text-base font-bold text-white mb-4">
                   {selectedProject.title}
                 </h3>
-                <p className="text-responsive-sm sm:text-responsive-base lg:text-responsive-lg text-gray-400 mb-6 leading-relaxed">
+                <p className="text-responsive-sm sm:text-responsive-base lg:text-sm text-gray-400 mb-6 leading-relaxed">
                   {selectedProject.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="bg-[#251f38] text-xs sm:text-sm font-semibold text-purple-500 rounded-full px-3 py-1"
+                      className="bg-[#251f38] text-xs sm:text-sm lg:text-xs font-semibold text-purple-500 rounded-full px-2 py-0.5"
                     >
                       {tag}
                     </span>
@@ -93,7 +93,7 @@ const Work = () => {
                     href={selectedProject.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-gray-800 hover:bg-purple-800 text-gray-400 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-responsive-sm sm:text-responsive-base lg:text-responsive-lg font-semibold text-center transition-colors duration-200"
+                    className="flex-1 bg-gray-800 hover:bg-purple-800 text-gray-400 px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-responsive-sm sm:text-responsive-base lg:text-sm font-semibold text-center transition-colors duration-200"
                   >
                     View Code
                   </a>
@@ -102,7 +102,7 @@ const Work = () => {
                       href={selectedProject.webapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-purple-600 hover:bg-purple-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-responsive-sm sm:text-responsive-base lg:text-responsive-lg font-semibold text-center transition-colors duration-200"
+                      className="flex-1 bg-purple-600 hover:bg-purple-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-responsive-sm sm:text-responsive-base lg:text-sm font-semibold text-center transition-colors duration-200"
                     >
                       View Live
                     </a>
