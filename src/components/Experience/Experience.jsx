@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 pb-24 px-2 sm:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-2"
     >
       {/* Section Title */}
       <div className="text-center mb-12 lg:mb-16">
@@ -40,14 +40,14 @@ const Experience = () => {
 
             {/* Content Section */}
             <div
-              className={`w-full max-w-full sm:max-w-md lg:max-w-lg p-4 sm:p-6 lg:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md ${
+              className={`w-full sm:max-w-md lg:max-w-lg p-2 sm:p-4 lg:p-8 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-16 sm:mr-16 ml-2 transform transition-transform duration-300 hover:scale-105`}
+              } sm:ml-16 sm:mr-16 ml-6 transform transition-transform duration-300 hover:scale-105`}
             >
               {/* Flex container for image and text */}
-              <div className="flex items-center space-x-4 lg:space-x-6">
+              <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-6">
                 {/* Company Logo/Image */}
-                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-md overflow-hidden flex-shrink-0">
+                <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-md overflow-hidden flex-shrink-0">
                   <img
                     src={experience.img}
                     alt={experience.company}
@@ -58,10 +58,10 @@ const Experience = () => {
                 {/* Role, Company Name, and Date */}
                 <div className="flex flex-col justify-between flex-1">
                   <div>
-                    <h3 className="text-responsive-lg sm:text-responsive-xl lg:text-responsive-2xl font-semibold text-white mb-1">
+                    <h3 className="text-responsive-base sm:text-responsive-lg lg:text-responsive-2xl font-semibold text-white mb-1">
                       {experience.role}
                     </h3>
-                    <h4 className="text-responsive-sm sm:text-responsive-base text-gray-300 mb-2">
+                    <h4 className="text-xs sm:text-responsive-base text-gray-300 mb-2">
                       {experience.company}
                     </h4>
                   </div>
@@ -70,16 +70,16 @@ const Experience = () => {
                 </div>
               </div>
 
-              <p className="mt-4 text-responsive-sm sm:text-responsive-base text-gray-400 leading-relaxed">
+              <p className="mt-2 text-xs sm:text-responsive-base text-gray-400 leading-relaxed">
                 {experience.desc}
               </p>
-              <div className="mt-4">
-                <h5 className="font-medium text-white text-responsive-sm sm:text-responsive-base mb-2">Skills:</h5>
-                <ul className="flex flex-wrap gap-2">
+              <div className="mt-2">
+                <h5 className="font-medium text-white text-xs sm:text-responsive-base mb-2">Skills:</h5>
+                <ul className="flex flex-wrap gap-1 sm:gap-2">
                   {experience.skills.map((skill, index) => (
                     <li
                       key={index}
-                      className="bg-[#8245ec] text-gray-300 px-3 py-1 text-xs sm:text-sm rounded-lg border border-gray-400"
+                      className="bg-[#8245ec] text-gray-300 px-2 py-0.5 text-[10px] sm:text-sm rounded-lg border border-gray-400"
                     >
                       {skill}
                     </li>
