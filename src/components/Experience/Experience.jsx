@@ -41,7 +41,7 @@ const Experience = () => {
             {/* Content Section */}
             <div
               className={`w-full sm:max-w-md lg:max-w-md p-2 sm:p-4 lg:p-4 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md ${
-                index % 2 === 0 ? "sm:ml-16 lg:ml-16" : "sm:mr-16 lg:mr-16"
+                index % 2 === 0 ? "sm:ml-16 lg:ml-8" : "sm:mr-16 lg:mr-8"
               } ml-6 sm:ml-16 sm:mr-16 transform transition-transform duration-300 hover:scale-105`}
             >
               <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-3">
