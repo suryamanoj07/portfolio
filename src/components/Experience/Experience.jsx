@@ -30,7 +30,7 @@ const Experience = () => {
             }`}
           >
             {/* Timeline Circle */}
-            <div className="absolute left-0 sm:left-1/2 transform -translate-x-2 sm:-translate-x-3 bg-gray-400 border-4 border-[#8245ec] w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full flex justify-center items-center z-10">
+            <div className="md:hidden absolute left-0 sm:left-1/2 transform -translate-x-2 sm:-translate-x-3 bg-gray-400 border-4 border-[#8245ec] w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16 rounded-full flex justify-center items-center z-10">
               <img
                 src={experience.img}
                 alt={experience.company}
