@@ -42,7 +42,7 @@ const Experience = () => {
             <div
               className={`w-full sm:max-w-md lg:max-w-md p-2 sm:p-4 lg:p-4 rounded-2xl shadow-2xl border border-white bg-gray-900 backdrop-blur-md ${
                 index % 2 === 0 ? "sm:ml-0 lg:ml-0" : "sm:mr-0 lg:mr-0"
-              } sm:ml-16 sm:mr-16 ml-2 lg:ml-0 lg:mr-0 transform transition-transform duration-300 hover:scale-105`}
+              } sm:ml-16 sm:mr-16 ml-6 lg:ml-0 lg:mr-0 transform transition-transform duration-300 hover:scale-105`}
             >
               <div className="flex items-center space-x-2 sm:space-x-4 lg:space-x-3">
                 {/* Company Logo/Image */}
