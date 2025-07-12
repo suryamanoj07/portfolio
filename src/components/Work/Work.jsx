@@ -15,7 +15,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[10vw] xl:px-[8vw] font-sans relative"
+      className="py-24 pb-24 px-[12vw] md:px-[7vw] lg:px-[8vw] xl:px-[6vw] font-sans relative"
     >
       {/* Section Title */}
       <div className="text-center mb-12 lg:mb-16">
@@ -28,25 +28,25 @@ const Work = () => {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid gap-6 sm:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
+      <div className="grid gap-6 sm:gap-8 lg:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3">
         {projects.map((project) => (
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
             className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-all duration-300"
           >
-            <div className="p-6 sm:p-8 lg:p-8 xl:p-10">
-              <h3 className="text-responsive-lg sm:text-responsive-xl lg:text-2xl xl:text-3xl font-bold text-white mb-4 lg:mb-6">
+            <div className="p-6 sm:p-8 lg:p-4 xl:p-6">
+              <h3 className="text-responsive-lg sm:text-responsive-xl lg:text-base xl:text-2xl font-bold text-white mb-4 lg:mb-4">
                 {project.title}
               </h3>
-              <p className="text-responsive-sm sm:text-responsive-base lg:text-lg xl:text-xl text-gray-500 mb-6 lg:mb-8 leading-relaxed line-clamp-4">
+              <p className="text-responsive-sm sm:text-responsive-base lg:text-xs xl:text-base text-gray-500 mb-6 lg:mb-4 leading-relaxed line-clamp-4">
                 {project.description}
               </p>
-              <div className="mb-4 lg:mb-6">
+              <div className="mb-4 lg:mb-4">
                 {project.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="inline-block bg-[#251f38] text-xs sm:text-sm lg:text-base font-semibold text-purple-500 rounded-full px-3 py-2 mr-2 mb-2 lg:px-4 lg:py-2"
+                    className="inline-block bg-[#251f38] text-xs sm:text-sm lg:text-xs font-semibold text-purple-500 rounded-full px-3 py-2 mr-2 mb-2 lg:px-2 lg:py-1"
                   >
                     {tag}
                   </span>
