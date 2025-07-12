@@ -66,7 +66,7 @@ const Experience = () => {
                 </div>
               </div>
               <p className="mt-2 text-xs sm:text-responsive-base lg:text-xs text-gray-400 leading-relaxed">
-                {experience.desc}
+                {experience.desc} {experience.company==="Atnatic" ? <p className="text-decoration-underline">www.atnatic.com</p>:""}
               </p>
               <div className="mt-2">
                 <h5 className="font-medium text-white text-xs sm:text-responsive-base lg:text-xs mb-2">Skills:</h5>
