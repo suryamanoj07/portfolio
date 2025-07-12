@@ -33,34 +33,36 @@ const Work = () => {
           <div
             key={project.id}
             onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-all duration-300"
+            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
           >
-            <div className="p-6 sm:p-8 lg:p-4 xl:p-6">
-              <h3 className="text-responsive-lg sm:text-responsive-xl lg:text-base xl:text-2xl font-bold text-white mb-4 lg:mb-4">
-                {project.title}
-              </h3>
-              <p className="text-responsive-sm sm:text-responsive-base lg:text-xs xl:text-base text-gray-500 mb-6 lg:mb-4 leading-relaxed line-clamp-4">
-                {project.description}
-              </p>
-              <div className="mb-4 lg:mb-4">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="inline-block bg-[#251f38] text-xs sm:text-sm lg:text-xs font-semibold text-purple-500 rounded-full px-3 py-2 mr-2 mb-2 lg:px-2 lg:py-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
+            <div className="flex flex-col flex-1 justify-between p-6 sm:p-8 lg:p-4 xl:p-6">
+              <div>
+                <h3 className="text-responsive-lg sm:text-responsive-xl lg:text-base xl:text-2xl font-bold text-white mb-4 lg:mb-4">
+                  {project.title}
+                </h3>
+                <p className="text-responsive-sm sm:text-responsive-base lg:text-xs xl:text-base text-gray-500 mb-6 lg:mb-4 leading-relaxed line-clamp-4">
+                  {project.description}
+                </p>
+                <div className="mb-4 lg:mb-4">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="inline-block bg-[#251f38] text-xs sm:text-sm lg:text-xs font-semibold text-purple-500 rounded-full px-3 py-2 mr-2 mb-2 lg:px-2 lg:py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex justify-center">
-                <button
-                  className="mt-2 px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-full shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 mx-auto"
-                  type="button"
-                  tabIndex={-1}
-                  onClick={e => e.stopPropagation()}
+              <div className="flex justify-center mt-4">
+                <div
+                  className="px-3 py-1 bg-purple-600 hover:bg-purple-700 text-white text-xs font-semibold rounded-full shadow-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2 mx-auto"
+                  
+                  
+                  
                 >
                   View More
-                </button>
+                </div>
               </div>
             </div>
           </div>
